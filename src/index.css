@@ -1,13 +1,94 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  font-family: Oxygen, sans-serif;
+  margin:1rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.wrapper{
+  display:grid;
+  grid-template-rows:repeat(auto-fit, minmax(12rem, 16rem));
+  gap:2rem;
+  justify-content:center;
 }
+
+.card{
+  overflow:hidden;
+  box-shadow: 0 2px 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  cursor:pointer;
+  transition:transform 200ms ease-in;
+  border-radius:2.5%;
+  border: 3px solid white;
+}
+
+.card__image{
+  padding: 1rem;
+  display: block;
+  margin-left: auto;
+  height:12rem;
+  width:12rem;
+  object-fit:cover;
+  border-radius: 50%;
+}
+
+.card__title{
+  padding: 0rem;
+  text-align: left;
+  font-weight: lighter;
+  font-weight: bold;
+}
+
+.card__calories{
+  margin: 0.3rem;
+  font-weight: lighter;
+  text-align: left;
+}
+
+.card__price{
+  padding: 0rem;
+  text-align: left;
+  font-weight: bold;
+  color:  #ffd700;
+}
+
+.calories__image{
+  display: block;
+  margin: left;
+  height:1.5rem;
+  width:1.5rem;
+  object-fit:cover;
+}
+
+.container{
+  display : flex;
+  flex-direction : row;
+}
+
+.container_calories{
+  display : flex;
+  flex-direction : row;
+}
+
+:hover{
+  transform:scale(1.02);
+}
+
+.card:hover{
+  background: #acccfd;
+    
+}
+
+.card__btn{
+  padding:1rem 1rem 1rem 1rem;
+  font-family:inherit;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #acccfd;
+  border: 1px;
+  background: white;
+  display: block;
+  border-radius: 8%;
+  border: 3px solid #acccfd;
+}
+
